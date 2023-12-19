@@ -32,7 +32,7 @@ What worked for us is a layered approach that combines several methods:
   the ocean.
 - The first layer that is created by pixel value **edge matching** using [Pillow](https://pypi.org/project/Pillow/).
 - The second layer that is created using **genetic algorithm**.
-- The last layer contains random obbjects that are placed on the surfaces they are
+- The last layer contains random objects that are placed on the surfaces they are
   allowed to be on based on user configuration.
 
 ## Files
