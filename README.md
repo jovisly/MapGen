@@ -37,10 +37,17 @@ What worked for us is a layered approach that combines several methods:
 
 ## Results
 
-With this method, we created five sets of maps for the five towns in the game.
-Here are some samples.
+With this method, we created five towns, each with four screens. Here are a
+couple of examples.
 
-### 1 - Queensburg 👑
+![map1](./images/map1.webp)
+![map2](./images/map2.webp)
 
-![1a](./images/1a.webp)
-![1b](./images/1b.webp)
+There is also a transition screen for the user to fly between towns.
+
+![fly](./images/transition.webp)
+
+Each town has 20 stages. And within each stage, the user plays a game of Yaaker
+with an alien.
+
+![play](./images/play.webp)
