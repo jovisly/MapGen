@@ -35,6 +35,24 @@ What worked for us is a layered approach that combines several methods:
 - The last layer contains random obbjects that are placed on the surfaces they are
   allowed to be on based on user configuration.
 
+## Files
+
+The main module is `make_map.py` which orchestrates the creation process of all
+the layers. A `params.py` is required to specify the image files for the tile
+set. After all the layers are created, they are combined into a single image.
+
+The single image is then split into four screens, so that the user can traverse
+the map of the same town with continuity.
+
+Image operations are provided in `utils/img.py`. For example, here we handle how
+to construct the first layer by edge matching (`is_mergeable_to_right()` and
+`is_mergeable_to_bottom()`).
+
+Genetic algorithm utilities are provided in `utils/genetic_algorithm.py`. In
+there, we let the tiles "mutate" to create offsprings. Then their fitness is
+calculated based on how well each tile matches its neighbors, including the
+first layer.
+
 ## Results
 
 With this method, we created five towns, each with four screens. Here are a
@@ -51,15 +69,3 @@ Each town has 20 stages. And within each stage, the user plays a game of Yaaker
 with an alien.
 
 ![play](./images/play.webp)
-
-## Files
-
-The main module is `make_map.py` which orchestrates the creation process of all
-the layers. A `params.py` is required to specify the image files for the tile
-set. After all the layers are created, they are combined into a single image.
-
-Image operations are provided in `utils/img.py`. For example, here we handle how
-to construct the first layer by edge matching (`is_mergeable_to_right()` and
-`is_mergeable_to_bottom()`).
-
-Genetic algorithm utilities are provided in `utils/genetic_algorithm.py`.
