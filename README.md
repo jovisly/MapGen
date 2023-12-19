@@ -51,3 +51,9 @@ Each town has 20 stages. And within each stage, the user plays a game of Yaaker
 with an alien.
 
 ![play](./images/play.webp)
+
+## Files
+
+The main module is `make_map.py` which orchestrates the creation process of all
+the layers. A `params.py` is required to specify the image files for the tile
+set. After all the layers are created, they are combined into a single image.
